@@ -1,5 +1,22 @@
 @import './base.css';
 
+/* Clases utilitarias */
+.text-light { color: var(--text-light); }
+.text-medium { color: var(--text-medium); }
+.text-dark { color: var(--text-dark); }
+
+.bg-light { background-color: var(--background-light); }
+.bg-dark { background-color: var(--background-dark); }
+
+.border-primary { border: 2px solid var(--detail-primary); }
+.border-secondary { border: 2px solid var(--detail-secondary); }
+.border-dark { border: 2px solid var(--detail-dark); }
+
+/* Aplicar variables en clases */
+.font-light { font-weight: var(--font-light); }
+.font-medium { font-weight: var(--font-medium); }
+.font-bold { font-weight: var(--font-bold); }
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
