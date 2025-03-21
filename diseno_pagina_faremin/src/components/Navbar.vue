@@ -1,73 +1,78 @@
 <script>
 export default {
-    name: 'Navbar'
+  name: 'Navbar'
 }
 </script>
 
 <template>
-    <nav>
-        <nav class="navbar">
-            <div class="navbar-brand">
-              <img src="" alt="Logo" class="logo">
-            </div>
-            <div class="navbar-menu">
-              <router-link to="/" class="nav-item text-light font-light">Nuesta Empresa</router-link>
-              <router-link to="/" class="nav-item text-light font-light">Servicios</router-link>
-              <router-link to="/" class="nav-item text-light font-light">Noticias</router-link>
-              <router-link to="/" class="nav-item  text-light font-light">Trabaja con Nosotros</router-link>
-              <router-link to="/" class="nav-item text-light font-light">Contacto</router-link>
-              <router-link to="/" class="nav-item text-light font-light">Intranet</router-link>
-            </div>
-          </nav>
-    </nav>
+  <!--bg-transparent -->
+  <nav class="navbar navbar-expand-lg bg-primary position-fixed w-100">
+    <div class="container-fluid">
+      <!-- Logo a la izquierda -->
+      <a class="navbar-brand text-white" href="#">Navbar</a>
+
+      <!-- Botón de menú en móviles -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menú de navegación -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto"> <!-- Alinea los ítems a la derecha -->
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Nuestra Empresa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Noticias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Trabaja con Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Intranet</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </template>
+
 <style scoped>
+/* Navbar transparente */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(174, 25, 25, 0.9);
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.5); /* Transparente con fondo oscuro */
   backdrop-filter: blur(10px);
   z-index: 1000;
 }
 
-.navbar-brand {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  height: 40px;
-  width: auto;
-}
-
-.navbar-menu {
-  display: flex;
-  gap: 2rem;
-  margin-right: 15px;
-}
-
-.nav-item {
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  font-size: 1rem;
-  border-radius: 5px;
+/* Estilos de los links */
+.nav-link {
+  color: white !important;
+  transition: background-color 0.3s ease;
   padding: 10px;
+  border-radius: 5px;
 }
 
-.nav-item:hover {
-  background-color: var(--detail-dark);
+/* Color al hacer hover */
+.nav-link:hover {
+  background-color: #333333;
 }
 
 @media (max-width: 768px) {
-  .navbar-menu {
-    display: none;
+  .navbar {
+    padding: 0.5rem 1rem;
   }
 }
 </style>
